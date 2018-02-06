@@ -1,0 +1,29 @@
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.nav-button {
+  min-width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+}
+
+.nav-icon {
+  margin-right: 8px;
+}
+
+.main-nav-item {
+  border-left-width: 3px;
+  border-left-style:  solid;
+}
+
+.sub-nav {
+  display: none;
+}
+
+.sub-nav-open {
+  display: block;
+}

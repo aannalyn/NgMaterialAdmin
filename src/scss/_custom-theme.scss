@@ -1,0 +1,47 @@
+@mixin custom-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+  
+  .mat-sidenav-container {
+    height: 100vh;
+  }
+
+  .mat-sidenav {
+    width: 220px;
+  }
+
+  .sidenav-toggle.mat-icon-button {
+    margin-right: auto;
+  }
+
+  .branding {
+    color: mat-color($primary, 500);
+    text-align: center;
+    margin: 13.8px;
+  }
+
+  .theme-picker-icon {
+    color: mat-color($accent, 50);
+  }
+
+  .main-nav-item {
+    border-left-color: mat-color($accent, 50);
+  }
+
+  .main-nav-item-selected,
+  .sub-nav-item-selected {
+    border-left-color: mat-color($primary, 500);
+
+    & > .nav-button {
+      color: mat-color($primary, 500);
+    }
+  }
+
+  .sidenav {
+    background: linear-gradient(to right,#fafafa 93%,#ededed 100%);
+  }
+
+}

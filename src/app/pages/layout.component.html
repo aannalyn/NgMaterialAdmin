@@ -1,0 +1,18 @@
+<mat-sidenav-container [class]="theme">
+  <mat-sidenav #sidenav mode="side" opened="true" color="accent" class="sidenav">
+    <h1 class="branding">NgMaterial</h1>
+    <mat-divider></mat-divider>
+    <app-navigation [menus]="menus"></app-navigation>
+  </mat-sidenav>
+  <mat-sidenav-content class="sidenav-content">
+    <mat-toolbar color="primary">
+      <button mat-icon-button class="sidenav-toggle" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <app-toolbar-nav (changeTheme)="changeTheme($event)"></app-toolbar-nav>
+    </mat-toolbar>
+    <div class="container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
