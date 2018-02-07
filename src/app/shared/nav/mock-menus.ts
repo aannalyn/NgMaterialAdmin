@@ -1,44 +1,62 @@
-import { Menu } from './menu.model';
 
-export const MENUS: Menu[] = [
-  {
-    title: 'Dashboard',
-    icon: 'dashboard',
-    link: '/dashboard',
-  },
-  {
-    title: 'Material',
-    icon: 'widgets',
-    submenus: [
+export const MENUS = [
+  [
       {
-        title: 'Buttons',
-        link: '/material/buttons',
+        title: 'Dashboard',
+        icon: 'dashboard',
+        link: '/dashboard',
       },
       {
-        title: 'Cards',
-        link: '/material/cards'
+        title: 'Material',
+        icon: 'widgets',
+        submenus: [
+          {
+            title: 'Buttons',
+            link: '/material/buttons',
+          },
+          {
+            title: 'Cards',
+            link: '/material/cards'
+          },
+          {
+            title: 'Grids',
+            link: '/material/grids'
+          },
+          {
+            title: 'Lists',
+            link: '/material/lists'
+          },
+          {
+            title: 'Progress',
+            link: '/material/progress'
+          },
+          {
+            title: 'Tabs',
+            link: '/material/tabs'
+          },
+        ]
       },
       {
-        title: 'Grids',
-        link: '/material/grids'
+        title: 'Forms',
+        icon: 'assignment',
+        link: '/forms',
+      },
+    ],
+   [
+      {
+        title: 'Profile',
+        icon: 'account_box',
+        link: '/profile',
       },
       {
-        title: 'Lists',
-        link: '/material/lists'
+        title: 'Settings',
+        icon: 'settings',
+        link: '/settings',
       },
       {
-        title: 'Progress',
-        link: '/material/progress'
-      },
-      {
-        title: 'Tabs',
-        link: '/material/tabs'
+        title: 'Logout',
+        icon: 'exit_to_app',
       },
     ]
-  },
-  {
-    title: 'Forms',
-    icon: 'assignment',
-    link: '/forms',
-  },
+  
 ];

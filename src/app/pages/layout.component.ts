@@ -11,12 +11,13 @@ import { LayoutModule, MediaMatcher} from '@angular/cdk/layout';
 })
 export class LayoutComponent {
   mobileQuery:MediaQueryList;
-  menus = MENUS;
+  lists = MENUS;
   theme = 'indigo-theme';
   availableLangs = [
     { name: 'English', code: 'en' }, 
     { name: 'Spanish', code: 'es' },
   ];
+  toggleMenuVal:boolean = false;
 
   private _mobileQueryListener: () => void;
 
@@ -38,5 +39,9 @@ export class LayoutComponent {
 
   changeTheme(value) {
     this.theme = value;
+  }
+
+  onToggleMenu() {
+    this.toggleMenuVal = !this.toggleMenuVal;
   }
 }

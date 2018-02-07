@@ -1,18 +1,20 @@
 <nav>
-  <ul class="main-nav nav-list">
-    <li class="main-nav-item nav-item" *ngFor="let menu of menus" [routerLink]="menu.link || []">
-      <button class="nav-button" mat-button navAccordion>
-        <mat-icon class="nav-icon">{{menu.icon}}</mat-icon>
-        {{menu.title}}
-      </button>
-      <ul class="sub-nav nav-list" *ngIf="menu.submenus">
-        <li class="sub-nav-item nav-item" *ngFor="let submenu of menu.submenus" [routerLink]="submenu.link || []">
-          <button class="nav-button" mat-button navAccordion>
-            <mat-icon class="nav-icon">{{submenu.icon}}</mat-icon>
-            {{submenu.title}}
-          </button>
-        </li>
-      </ul>  
-    </li>
-  </ul>
+  <ng-template ngFor let-list [ngForOf]="lists" let-i="index">
+    <ul class="main-nav nav-list" *ngIf="i==toggleMenuVal">
+      <li class="main-nav-item nav-item" *ngFor="let menu of list" [routerLink]="menu.link || []">
+        <button class="nav-button" mat-button navAccordion>
+          <mat-icon class="nav-icon">{{menu.icon}}</mat-icon>
+          {{menu.title}}
+        </button>
+        <ul class="sub-nav nav-list" *ngIf="menu.submenus">
+          <li class="sub-nav-item nav-item" *ngFor="let submenu of menu.submenus" [routerLink]="submenu.link || []">
+            <button class="nav-button" mat-button navAccordion>
+              <mat-icon class="nav-icon">{{submenu.icon}}</mat-icon>
+              {{submenu.title}}
+            </button>
+          </li>
+        </ul>  
+      </li>
+    </ul>
+  </ng-template>
 </nav>

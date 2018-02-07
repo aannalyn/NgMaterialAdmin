@@ -6,7 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements OnInit {
-  @Input() menus: Array<any>;
+  @Input() lists:Array<any>;
+  @Input() toggleMenuVal:number;
 
   constructor() { }
 

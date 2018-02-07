@@ -7,11 +7,14 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { MaterialModule } from './material/material.module';
 import { LayoutMaterialModule } from './layout-material.module';
 
+import { UserInfoComponent } from '../components/user-info/user-info.component';
 import { NavigationComponent } from '../components/navigation/navigation.component';
 import { ToolbarNavComponent } from '../components/toolbar-nav/toolbar-nav.component';
 import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsComponent } from './forms/forms.component';
+import { ProfileComponent } from './profile/profile.component';
+import { SettingsComponent } from './settings/settings.component';
 
 import { NavAccordionDirective } from '../directives/nav-accordion.directive';
 
@@ -25,12 +28,15 @@ import { NavAccordionDirective } from '../directives/nav-accordion.directive';
     LayoutMaterialModule,    
   ],
   declarations: [
+    UserInfoComponent,
     NavigationComponent,
     ToolbarNavComponent,
     LayoutComponent,
     DashboardComponent,
     FormsComponent,    
-    NavAccordionDirective,
+    ProfileComponent, 
+    SettingsComponent,
+    NavAccordionDirective,     
   ]
 })
 export class PagesModule { }

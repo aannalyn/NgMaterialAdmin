@@ -1,0 +1,12 @@
+<div class="user">
+  <div class="user-photo">
+    <img src="assets/user.png" alt="User Photo">
+  </div>
+  <div class="user-details" (click)="onToggleMenu()">
+    <div>
+      <span>John Doe</span>
+      <span>johndoe@gmail.com</span>
+    </div>
+    <mat-icon>{{ toggleMenuVal ? 'keyboard_arrow_up' : 'keyboard_arrow_down' }}</mat-icon>
+  </div>
+</div>

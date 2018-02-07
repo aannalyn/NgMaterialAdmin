@@ -1,8 +1,9 @@
 <mat-sidenav-container [class]="theme">
   <mat-sidenav #sidenav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches" color="accent" class="sidenav">
-    <h1 class="branding">NgMaterial</h1>
+    <h1 class="branding">NgMaterial</h1>  
+    <app-user-info (toggleMenu)="onToggleMenu($event)"></app-user-info>
     <mat-divider></mat-divider>
-    <app-navigation [menus]="menus"></app-navigation>
+    <app-navigation [lists]="lists" [toggleMenuVal]="toggleMenuVal"></app-navigation>
   </mat-sidenav>
   <mat-sidenav-content class="sidenav-content">
     <mat-toolbar color="primary">
