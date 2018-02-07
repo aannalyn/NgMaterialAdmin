@@ -1,39 +1,11 @@
-
-
 <mat-menu #appMenu="matMenu">
   <mat-grid-list cols="2">
     <mat-grid-tile *ngFor="let theme of themes" [style.background]="theme.color" (click)="onChangeTheme(theme.name)">
-      <mat-icon mat-icon-button class="theme-picker-icon">palette</mat-icon>
+      <mat-icon mat-icon-button class="theme-picker-icon" *ngIf="theme.name == defaultTheme">check_box</mat-icon>
     </mat-grid-tile>
   </mat-grid-list>
 </mat-menu>
 
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-    <mat-icon>format_color_fill</mat-icon>
+<button mat-icon-button matTooltip="Color Scheme" [matMenuTriggerFor]="appMenu">
+  <mat-icon >format_color_fill</mat-icon>
 </button>
-<!-- 
-<button mat-icon-button (click)="onChangeTheme()">
-  <mat-icon>format_color_fill</mat-icon>
-</button>
-
-
-<button mat-icon-button [mat-menu-trigger-for]="themeMenu" matTooltip="Select a theme!"
-        tabindex="-1">
-  <mat-icon>format_color_fill</mat-icon>
-</button> -->
-
-<!-- 
-<mat-menu #themeMenu="matMenu" x-position="before">
-  <mat-grid-list cols="2">
-    <mat-grid-tile *ngFor="let theme of themes">
-      <div mat-menu-item (click)="installTheme(theme)">
-        <div class="docs-theme-picker-swatch">
-        <div [style.background]="theme.color">
-          <mat-icon>check_circle</mat-icon>
-        </div>
-          <div class="docs-theme-picker-primary" [style.background]="theme.primary"></div>
-        </div>
-      </div>
-    </mat-grid-tile>
-  </mat-grid-list>
-</mat-menu> -->

@@ -5,6 +5,10 @@
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
   
+  .container {
+    padding: .5rem;
+  }
+
   .mat-sidenav-container {
     height: 100vh;
   }
@@ -20,7 +24,7 @@
   .branding {
     color: mat-color($primary, 500);
     text-align: center;
-    margin: 13.8px;
+    margin: .8rem;
   }
 
   .theme-picker-icon {
@@ -44,4 +48,13 @@
     background: linear-gradient(to right,#fafafa 93%,#ededed 100%);
   }
 
+  .mat-card-content {
+    padding-top: 24px;
+  }
+
+  .sample-grid {
+    .mat-grid-tile {
+      background-color: mat-color($primary, 400);
+    }
+  }
 }

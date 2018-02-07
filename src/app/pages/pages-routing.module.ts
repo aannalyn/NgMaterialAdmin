@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'material',
         loadChildren: './material/material.module#MaterialModule'
+      },
+      {
+        path: 'forms',
+        component: FormsComponent
       }
     ]
   }

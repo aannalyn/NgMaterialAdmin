@@ -23,17 +23,22 @@ export const MENUS: Menu[] = [
         link: '/material/grids'
       },
       {
-        title: 'Icons',
-        link: '/material/icons'
-      },
-      {
         title: 'Lists',
         link: '/material/lists'
+      },
+      {
+        title: 'Progress',
+        link: '/material/progress'
       },
       {
         title: 'Tabs',
         link: '/material/tabs'
       },
     ]
+  },
+  {
+    title: 'Forms',
+    icon: 'assignment',
+    link: '/forms',
   },
 ];

@@ -1,4 +1,3 @@
-// @import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import '~@angular/material/theming';
 @include mat-core();
 
@@ -7,6 +6,8 @@
 
 @import 'custom-theme';
 
+@include angular-material-theme($indigo-theme);
+@include custom-theme($indigo-theme);  
 
 .indigo-theme {
   @include angular-material-theme($indigo-theme);

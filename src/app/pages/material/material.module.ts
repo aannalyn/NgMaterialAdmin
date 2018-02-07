@@ -9,6 +9,7 @@ import { ButtonsComponent } from './buttons/buttons.component';
 import { CardsComponent } from './cards/cards.component';
 import { GridsComponent } from './grids/grids.component';
 import { ListsComponent } from './lists/lists.component';
+import { ProgressComponent } from './progress/progress.component';
 import { TabsComponent } from './tabs/tabs.component';
 
 @NgModule({
@@ -23,7 +24,8 @@ import { TabsComponent } from './tabs/tabs.component';
     CardsComponent, 
     GridsComponent, 
     ListsComponent, 
-    TabsComponent,
+    ProgressComponent,
+    TabsComponent, 
   ]
 })
 export class MaterialModule { }

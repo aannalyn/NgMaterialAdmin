@@ -1,13 +1,14 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-toolbar-nav',
   templateUrl: './toolbar-nav.component.html',
   styleUrls: ['./toolbar-nav.component.scss']
 })
-export class ToolbarNavComponent implements OnInit {
+export class ToolbarNavComponent {
+  @Input() defaultTheme:string;
   @Output() changeTheme = new EventEmitter();
-
+  
   themes = [
     {
       name: 'blue-theme',
@@ -19,12 +20,8 @@ export class ToolbarNavComponent implements OnInit {
     },
   ];
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
   onChangeTheme(selected) {
+    this.defaultTheme = selected;
     this.changeTheme.emit(selected);
   }
 
