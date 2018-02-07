@@ -21,3 +21,45 @@
     margin-right: auto;
   }
 }
+
+.settings {
+  max-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;  
+
+  &>.settings-item {
+    margin: .5rem;
+    box-sizing: border-box;  
+  }
+  
+  &>.settings-item:first-child {
+    flex: 1 1 25%;
+    max-width: 25%;
+    text-align: center;
+
+    img {
+      margin-bottom: 10px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &>.settings-item:last-child {
+    flex: 1 1 70%;
+    max-width: 70%;
+  }
+
+}
+
+@media screen and (max-width: 992px)  {
+  .settings {
+    &>.settings-item:first-child,
+    .settings-item:last-child {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}

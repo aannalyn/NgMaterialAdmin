@@ -13,7 +13,6 @@ import { ToolbarNavComponent } from '../components/toolbar-nav/toolbar-nav.compo
 import { LayoutComponent } from './layout.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FormsComponent } from './forms/forms.component';
-import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 
 import { NavAccordionDirective } from '../directives/nav-accordion.directive';
@@ -34,7 +33,6 @@ import { NavAccordionDirective } from '../directives/nav-accordion.directive';
     LayoutComponent,
     DashboardComponent,
     FormsComponent,    
-    ProfileComponent, 
     SettingsComponent,
     NavAccordionDirective,     
   ]
